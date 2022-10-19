@@ -4,30 +4,62 @@
 
 from typing import List
 
-
+#Écrire un programme qui lit un nombre et affiche sa valeur absolue, sans utiliser de fonction avancée
 def convert_to_absolute(number: float) -> float:
-    return 0
+    absolu = number * -1
+    return absolu 
 
-
+#Écrire un petit script qui génère tous ces noms à partir des deux chaînes suivantes : prefixes = 'JKLMNOPQ' et suffixe = 'ack'
 def use_prefixes() -> List[str]:
     prefixes, suffixe = 'JKLMNOPQ', 'ack'
+    new_list = []
+    for lettre in prefixes:
+        new_list.append(lettre + suffixe)
+    
+    return new_list
 
-    return [""]
-
-
+#Calculer la somme des 100 premiers nombres entiers premiers excluant le nombre 1
 def prime_integer_summation() -> int:
+   
+        
     return 0
 
-
+#Calculer la factorielle d’un nombre entier, sans utiliser de fonction avancée
 def factorial(number: int) -> int:
-    return 0
+    factorielle = 1
+    for i in range(2, number+1):
+        factorielle *= i
+    return factorielle
 
-
+#Utiliser l’instruction 'continue' pour modifier une boucle for d’affichage de tous les entiers de 1 à 10 compris, 
+#sauf lorsque la variable de boucle vaut 5
 def use_continue() -> None:
-    pass
-
+    for nbr_entier in range(1, 11):
+        if nbr_entier == 5:
+            continue
+        print (nbr_entier)
 
 def verify_ages(groups: List[List[int]]) -> List[bool]:
+    acceptable = []
+    for group in groups:
+        if 25 in group:
+            acceptable.append(True) 
+            continue
+        elif len(group) > 10 or len(group) <= 3:
+            acceptable.append(False)
+            continue
+        elif max(group) > 70 and 50 in group or min(group) < 18:
+            acceptable.append(False)
+            continue
+
+    return acceptable
+
+        
+    
+
+    
+
+    #critere dage
     return []
 
 
